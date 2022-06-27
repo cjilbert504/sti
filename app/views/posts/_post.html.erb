@@ -14,5 +14,5 @@
     <%= post.user.email %>
   </p>
 
-  <%= render "#{current_user.to_view_path}/post_editing_controls", user: current_user, post: post %>
+  <%= render "#{current_user.view_path}/post_editing_controls", user: current_user, post: post %>
 </div>

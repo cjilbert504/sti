@@ -3,7 +3,7 @@ class User < ApplicationRecord
 
   has_many :posts
 
-  def to_view_path
+  def view_path
     type.downcase.pluralize
   end
 end
