@@ -12,6 +12,21 @@
   </head>
 
   <body>
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <nav class="bg-gray-800">
+      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+          <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="hidden sm:block sm:ml-6">
+              <div class="flex space-x-4">
+                <%= link_to "Log In", new_session_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+                <%= link_to "Log Out", session_path, data: { turbo_method: :delete }, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
